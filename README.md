@@ -1,6 +1,6 @@
 # TP26 – Microservices Observables et Résilients
 
-## 📌 Description
+##  Description
 Ce TP met en œuvre une architecture **microservices Spring Boot** orientée **observabilité et résilience**, déployée avec **Docker Compose**.  
 Le projet comprend plusieurs services indépendants (Book Service, Pricing Service), une base de données MySQL et une orchestration complète via Docker.
 
@@ -11,7 +11,7 @@ L’objectif principal est de :
 
 ---
 
-## 🗂️ Structure du projet
+##  Structure du projet
 - **book-service** : Service Spring Boot principal
 - **pricing-service** : Service Spring Boot secondaire
 - **docker-compose.yml** : Orchestration des services
@@ -19,7 +19,7 @@ L’objectif principal est de :
 
 ---
 
-## ▶️ Démarrage de l’application (Spring Boot)
+##  Démarrage de l’application (Spring Boot)
 
 L’application Spring Boot démarre correctement depuis IntelliJ IDEA, comme montré ci-dessous.  
 Les logs indiquent :
@@ -32,12 +32,12 @@ Les logs indiquent :
 
 ---
 
-## 🐳 Déploiement avec Docker Compose
+##  Déploiement avec Docker Compose
 
 Les services sont lancés via **Docker Compose**.  
 Plusieurs instances de `book-service` sont déployées pour simuler la montée en charge et la résilience.
 
-### 📦 Conteneurs actifs
+###  Conteneurs actifs
 - book-service (plusieurs instances)
 - pricing-service
 - mysql
@@ -46,7 +46,7 @@ Plusieurs instances de `book-service` sont déployées pour simuler la montée e
 
 ---
 
-## 📊 Supervision via Docker Desktop
+##  Supervision via Docker Desktop
 
 Docker Desktop permet de visualiser :
 - Les conteneurs en cours d’exécution
@@ -60,7 +60,7 @@ Cela confirme que tous les services sont bien déployés et fonctionnels.
 
 ---
 
-## ✅ Conclusion
+## Conclusion
 Ce TP valide :
 - Le bon fonctionnement d’une architecture microservices
 - L’intégration Spring Boot + Docker
