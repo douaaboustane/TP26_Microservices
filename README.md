@@ -23,7 +23,7 @@ L’ensemble des services est déployé dans des conteneurs Docker via **docker-
 
 ###  Vue globale des conteneurs
 
-![Docker Containers Overview](26_1.png)
+![Docker Containers Overview](26 1.png)
 
 Les conteneurs actifs incluent :
 - `book-service` (plusieurs instances)
@@ -36,7 +36,7 @@ Les conteneurs actifs incluent :
 
 Plusieurs instances du **Book Service** sont lancées pour démontrer la **résilience** et la **scalabilité**.
 
-![Multiple Book Service Instances](26-2.png)
+![Multiple Book Service Instances](26 2.png)
 
 Chaque instance écoute sur un port différent, ce qui permet :
 - La répartition de charge
