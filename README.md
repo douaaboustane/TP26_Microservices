@@ -1,70 +1,70 @@
+# TP26 – Microservices Observables et Résilients
+
+## 📌 Description
+Ce TP met en œuvre une architecture **microservices Spring Boot** orientée **observabilité et résilience**, déployée avec **Docker Compose**.  
+Le projet comprend plusieurs services indépendants (Book Service, Pricing Service), une base de données MySQL et une orchestration complète via Docker.
+
+L’objectif principal est de :
+- Déployer plusieurs instances de services
+- Observer leur exécution
+- Vérifier leur bon fonctionnement dans un environnement conteneurisé
 
 ---
 
-##  Lancement des services Spring Boot
+## 🗂️ Structure du projet
+- **book-service** : Service Spring Boot principal
+- **pricing-service** : Service Spring Boot secondaire
+- **docker-compose.yml** : Orchestration des services
+- **MySQL** : Base de données utilisée par les services
 
-Les services Spring Boot sont lancés avec succès depuis IntelliJ IDEA.
+---
 
-###  Démarrage de l’application Book Service
+## ▶️ Démarrage de l’application (Spring Boot)
 
-![Spring Boot Book Service](doc.png)
-
-On observe :
-- Initialisation de Spring Boot
-- Configuration JPA / Hibernate
-- Connexion à la base MySQL
+L’application Spring Boot démarre correctement depuis IntelliJ IDEA, comme montré ci-dessous.  
+Les logs indiquent :
+- Initialisation de Hibernate
+- Connexion à la base de données
 - Démarrage du serveur Tomcat
+- Application prête à recevoir des requêtes
+
+![Démarrage de l’application Spring Boot](doc.png)
 
 ---
 
-##  Déploiement avec Docker
+## 🐳 Déploiement avec Docker Compose
 
-L’ensemble des services est déployé dans des conteneurs Docker via **docker-compose**.
+Les services sont lancés via **Docker Compose**.  
+Plusieurs instances de `book-service` sont déployées pour simuler la montée en charge et la résilience.
 
-###  Vue globale des conteneurs
+### 📦 Conteneurs actifs
+- book-service (plusieurs instances)
+- pricing-service
+- mysql
 
-![Docker Containers Overview](26 1.png)
-
-Les conteneurs actifs incluent :
-- `book-service` (plusieurs instances)
-- `pricing-service`
-- `mysql`
-
----
-
-###  Scalabilité des services
-
-Plusieurs instances du **Book Service** sont lancées pour démontrer la **résilience** et la **scalabilité**.
-
-![Multiple Book Service Instances](26 2.png)
-
-Chaque instance écoute sur un port différent, ce qui permet :
-- La répartition de charge
-- Une meilleure tolérance aux pannes
+![Conteneurs Docker en cours d’exécution](26%201.png)
 
 ---
 
-##  Technologies utilisées
+## 📊 Supervision via Docker Desktop
 
-- **Java 17+**
-- **Spring Boot 3**
-- **Spring Data JPA**
-- **MySQL**
-- **Docker & Docker Compose**
-- **IntelliJ IDEA**
-- **Hibernate**
-- **Tomcat embarqué**
+Docker Desktop permet de visualiser :
+- Les conteneurs en cours d’exécution
+- Les ports exposés
+- L’utilisation CPU et mémoire
+- L’état global du système
 
----
+Cela confirme que tous les services sont bien déployés et fonctionnels.
 
-##  Conclusion
-
-Ce TP démontre :
-- La mise en place d’une architecture microservices
-- Le déploiement et la gestion des services avec Docker
-- La capacité à faire évoluer le système avec plusieurs instances
-- Une base solide pour l’observabilité et la résilience applicative
+![Vue globale Docker Desktop](26%202.png)
 
 ---
 
+## ✅ Conclusion
+Ce TP valide :
+- Le bon fonctionnement d’une architecture microservices
+- L’intégration Spring Boot + Docker
+- Le déploiement multi-instances
+- L’observabilité via Docker Desktop
 
+Le système est opérationnel, scalable et prêt pour des tests de résilience et de charge.
